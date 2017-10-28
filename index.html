@@ -81,12 +81,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ToolBar"><a href="#ToolBar" class="headerlink" title="ToolBar"></a>ToolBar</h1><p>这是内容…..</p>
-
+        <h1 id="右键菜单"><a href="#右键菜单" class="headerlink" title="右键菜单"></a>右键菜单</h1><ul>
+<li>在Activity中创建</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)</div><div class="line">        &#123;</div><div class="line">           MenuInflater.Inflate(Resource.Menu.ProblemListContextMenu, menu);</div><div class="line">           base.OnCreateContextMenu(menu, v, menuInfo);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public override bool OnContextItemSelected(IMenuItem item)</div><div class="line">        &#123;</div><div class="line">           AdapterContextMenuInfo menuInfo = (AdapterContextMenuInfo)item.MenuInfo;</div><div class="line">           switch (item.ItemId)</div><div class="line">           &#123;</div><div class="line">               case Resource.Id.download:</div><div class="line">                   Toast.MakeText(this, &quot;下载成功&quot;+ menuInfo.Position, ToastLength.Short).Show();</div><div class="line">                   break;</div><div class="line">               case Resource.Id.del:</div><div class="line">                   Toast.MakeText(this, &quot;删除成功&quot; + menuInfo.Position, ToastLength.Short).Show();</div><div class="line">                   break;</div><div class="line">               default:</div><div class="line">                   return base.OnContextItemSelected(item);</div><div class="line">           &#125;</div><div class="line">           return true;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/XamarinRecipes/XamarinRecipes.github.io/2017/10/09/first/" data-id="cj8jz0pqa0000jsvwb3wswvv0" class="article-share-link">Share</a>
+      <a data-url="https://github.com/XamarinRecipes/XamarinRecipes.github.io/2017/10/09/first/" data-id="cj9b6l0bw00001ovwdtm6wh4c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -131,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/XamarinRecipes/XamarinRecipes.github.io/2017/10/09/hello-world/" data-id="cj8jz0pqj0001jsvwqcqmbui7" class="article-share-link">Share</a>
+      <a data-url="https://github.com/XamarinRecipes/XamarinRecipes.github.io/2017/10/09/hello-world/" data-id="cj9b6l0d400011ovwiwy4gver" class="article-share-link">Share</a>
       
       
     </footer>
